@@ -1,0 +1,60 @@
+{% extends 'lessons/base.html' %}
+{% load static %}
+
+{% block title %}About Us - Swimming Lessons{% endblock %}
+
+{% block content %}
+<div class="about-container">
+    <div class="about-content">
+        <h1>About Us</h1>
+        <p class="about-intro">Welcome to Safe Swim Academy! We are dedicated to providing high-quality swimming lessons and training facilities.</p>
+        
+        <div class="locations-section">
+            <h2>Our Locations</h2>
+            <p class="locations-intro">We have offices and training facilities in Atlanta, San Jose, and Maryland.</p>
+            
+            <div class="locations-grid">
+                <div class="location-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Atlanta, GA</h3>
+                    <p class="location-address">2500 Pine Tree Rd NE<br>Atlanta, GA 30324</p>
+                </div>
+                
+                <div class="location-card">
+                    <div class="location-icon">📍</div>
+                    <h3>San Jose, CA</h3>
+                    <p class="location-address">3222 Moorpark Ave<br>San Jose, CA 95117</p>
+                </div>
+                
+                <div class="location-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Glen Burnie, MD</h3>
+                    <p class="location-address">7777 Crain Hwy<br>Glen Burnie, MD 21061</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-info-section">
+            <h2>Contact Information</h2>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-text">
+                        <strong>Customer Service Phone:</strong>
+                        <a href="tel:4044084949">404 408 4949</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-text">
+                        <strong>Email Address:</strong>
+                        <a href="mailto:safeswimacademy@email.com">safeswimacademy@email.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Swimming Lessons{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="{% url 'home' %}">Tesfa Swim Academy</a>
+            </div>
+            <div class="nav-menu">
+                <a href="{% url 'home' %}" class="nav-link">Home</a>
+                <a href="{% url 'signup' %}" class="nav-link">Sign Up</a>
+                {% if user_email %}
+                    <span class="user-email">Welcome, {{ user_email }}</span>
+                    <a href="{% url 'signout' %}" class="nav-link signout-btn">Sign Out</a>
+                {% else %}
+                    <a href="{% url 'signin' %}" class="nav-link">Sign In</a>
+                {% endif %}
+                <a href="{% url 'about_us' %}" class="nav-link">About Us</a>
+                <a href="{% url 'contact_us' %}" class="nav-link">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Swim Academy. All rights reserved.</p>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
+

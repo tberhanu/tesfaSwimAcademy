@@ -1,0 +1,81 @@
+{% extends 'lessons/base.html' %}
+{% load static %}
+
+{% block title %}Home - Swimming Lessons{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <h1>Welcome to Swim Academy</h1>
+    <p>Learn to swim with confidence and safety</p>
+</div>
+
+<div class="swim-images">
+    <h2>Our Swimming Programs</h2>
+    <div class="image-gallery">
+        <div class="image-card">
+            <div class="image-placeholder">
+                <img src="{% static 'images/swim1.jpg' %}" alt="Swimming pool" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="placeholder-content" style="display:none;">
+                    <span>🏊</span>
+                    <p>Swimming Pool</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-card">
+            <div class="image-placeholder">
+                <img src="{% static 'images/swim2.jpg' %}" alt="Swimming lesson" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="placeholder-content" style="display:none;">
+                    <span>🏊‍♀️</span>
+                    <p>Swimming Lesson</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-card">
+            <div class="image-placeholder">
+                <img src="{% static 'images/swim3.jpg' %}" alt="Swimming training" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="placeholder-content" style="display:none;">
+                    <span>🏊‍♂️</span>
+                    <p>Swimming Training</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="training-sessions">
+    <h2>Training Sessions</h2>
+    <div class="session-grid">
+        <div class="session-card">
+            <div class="session-icon">🌊</div>
+            <h3>Beginner</h3>
+            <p>Perfect for those just starting their swimming journey. Learn basic strokes and water safety.</p>
+            <button class="btn-primary" onclick="window.location.href='{% url 'about_us' %}'">Learn More</button>
+        </div>
+        <div class="session-card">
+            <div class="session-icon">🌊</div>
+            <h3>Intermediate</h3>
+            <p>Improve your technique and build endurance. For swimmers with basic skills.</p>
+            <button class="btn-primary" onclick="window.location.href='{% url 'about_us' %}'">Learn More</button>
+        </div>
+        <div class="session-card">
+            <div class="session-icon">🌊</div>
+            <h3>Advanced</h3>
+            <p>Master advanced techniques and competitive swimming. For experienced swimmers.</p>
+            <button class="btn-primary" onclick="window.location.href='{% url 'about_us' %}'">Learn More</button>
+        </div>
+        <div class="session-card">
+            <div class="session-icon">👶</div>
+            <h3>Infants</h3>
+            <p>Gentle introduction to water for babies. Parent-child classes available.</p>
+            <button class="btn-primary" onclick="window.location.href='{% url 'about_us' %}'">Learn More</button>
+        </div>
+        <div class="session-card">
+            <div class="session-icon">👧</div>
+            <h3>Kids</h3>
+            <p>Fun and engaging lessons designed specifically for children. Build confidence in the water.</p>
+            <button class="btn-primary" onclick="window.location.href='{% url 'about_us' %}'">Learn More</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
