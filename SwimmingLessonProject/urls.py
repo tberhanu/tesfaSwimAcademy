@@ -21,4 +21,5 @@ from django.urls import path, include
 urlpatterns = [
     path("django-admin/", admin.site.urls),
     path("", include("lessons.urls")),
+    path('', include('pwa.urls')),  # You MUST use an empty string as the URL prefix
 ]
